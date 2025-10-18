@@ -1,0 +1,11 @@
+# Choisir l'image de base avec Java
+FROM openjdk:21-jdk-slim
+
+# Définir le répertoire de travail
+WORKDIR /app
+
+# Copier le jar compilé
+COPY target/<nom-du-jar>.jar app.jar
+
+# Commande pour lancer l'application
+CMD ["java", "-jar", "app.jar"]
